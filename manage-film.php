@@ -5,7 +5,7 @@
         <h1>Manage Film</h1>
         <br /> <br />
         <!-- button to add admin -->
-        <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary">Add Film</a>
+        <a href="<?php echo SITEURL; ?>admin/add-film.php" class="btn-primary">Add Film</a>
         <br /> <br /> <br />
         <?php
         if (isset($_SESSION['add'])) {
@@ -50,7 +50,7 @@
 
             <?php
             //create the sql query to get all the food
-            $sql = "SELECT * FROM tbl_food";
+            $sql = "SELECT * FROM tbl_film";
             //execute the query
             $res = mysqli_query($conn, $sql);
             //count the num of rows
@@ -103,9 +103,9 @@
                             <?php echo $active; ?>
                         </td>
                         <td>
-                            <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id; ?>"
+                            <a href="<?php echo SITEURL; ?>admin/update-film.php?id=<?php echo $id; ?>"
                                 class="btn-secondary">Update Film</a>
-                            <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>"
+                            <a href="<?php echo SITEURL; ?>admin/delete-film.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>"
                                 class="btn-danger">Delete
                                 Film</a>
                         </td>
@@ -120,7 +120,7 @@
 
             } else {
                 //food not added inthe database
-                echo "<tr><td colspan='7' class='error'>Food Not Added</td></tr>";
+                echo "<tr><td colspan='7' class='error'>film Not Added</td></tr>";
 
             }
             ?>
