@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     //get all the details
     $id = $_GET['id'];
     //sql query to get 
-    $sql2 = "SELECT * FROM tbl_food WHERE id=$id";
+    $sql2 = "SELECT * FROM tbl_film WHERE id=$id";
     // execute the query
     $res2 = mysqli_query($conn, $sql2);
     //get the value based on query executed
@@ -22,7 +22,7 @@ if (isset($_GET['id'])) {
 
 } else {
     //redirection
-    header('location:' . SITEURL . 'admin/manage-food.php');
+    header('location:' . SITEURL . 'admin/manage-film.php');
 
 }
 ?>
@@ -63,7 +63,7 @@ if (isset($_GET['id'])) {
                             //image avilable
                             ?>
 
-                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $current_image; ?>" width="100px">
+                            <img src="<?php echo SITEURL; ?>images/film/<?php echo $current_image; ?>" width="100px">
                             <?php
                         }
 
@@ -188,7 +188,7 @@ if (isset($_GET['id'])) {
                     $upload = move_uploaded_file($src_path, $dest_path);
                     if ($upload == false) {
                         $_SESSION['upload'] = "<div class='error'>Failed to upload new image..</div>";
-                        header('location:' . SITEURL . 'admin/manage-food.php');
+                        header('location:' . SITEURL . 'admin/manage-film.php');
                         //stop the proccess
                         die();
 
@@ -202,7 +202,7 @@ if (isset($_GET['id'])) {
                             //failedd to remove the image
                             $_SESSION['remove-failed'] = "<div class='error'>Failed to remove the image..</div>";
                             //redirection
-                            header('location:' . SITEURL . 'admin/manage-food.php');
+                            header('location:' . SITEURL . 'admin/manage-film.php');
                             die();
                         }
 
