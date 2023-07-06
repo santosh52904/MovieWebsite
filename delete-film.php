@@ -22,37 +22,37 @@ if (isset($_GET['id']) && isset($_GET['image_name'])) {
         if ($remove == false) {
             //failed to remove
             $_SESSION['upload'] = "<div class='error'>Failed to remove</div>";
-            //redirection to manage food 
-            header('location:' . SITEURL . 'admin/manage-food.php');
+            //redirection to manage film 
+            header('location:' . SITEURL . 'admin/manage-film.php');
             //stop the process
             die();
         }
 
     }
-    //3.delete food from the thdatabase
-    $sql = "DELETE FROM tbl_food WHERE id=$id";
+    //3.delete film from the thdatabase
+    $sql = "DELETE FROM tbl_film WHERE id=$id";
     //execute the query
     $res = mysqli_query($conn, $sql);
 
-    //4.redirection to manage food
+    //4.redirection to manage film
     if ($res == true) {
         //food deleted
-        $_SESSION['delete'] = "<div class='success'>Food Deleted Successfully..</div>";
-        header('location:' . SITEURL . 'admin/manage-food.php');
+        $_SESSION['delete'] = "<div class='success'>film Deleted Successfully..</div>";
+        header('location:' . SITEURL . 'admin/manage-film.php');
 
     } else {
         // failed to delete 
         $_SESSION['delete'] = "<div class='error'>Failed Delete..</div>";
-        header('location:' . SITEURL . 'admin/manage-food.php');
+        header('location:' . SITEURL . 'admin/manage-film.php');
     }
 
 
 } else {
-    //redirection to food manage pafe
+    //redirection to film manage pafe
 
     // echo "Redirection";
     $_SESSION['unauthorize'] = "<div class='error'>Unauthorized Access.</div>";
-    header('location:' . SITEURL > 'admin/manage-food.php');
+    header('location:' . SITEURL > 'admin/manage-film.php');
 
 }
 
