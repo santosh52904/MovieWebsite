@@ -37,7 +37,7 @@ include('../config/constants.php');
                 <li><a href="index.php">Home</a></li>
                 <li><a href="manage-admin.php">Admin</a></li>
                 <li><a href="manage-category.php">Category</a></li>
-                <li><a href="manage-food.php">Film</a></li>
+                <li><a href="manage-film.php">Film</a></li>
                 <li><a href="manage-order.php">Order</a></li>
                 <li><a href="logout.php">LogOut</a></li>
             </ul>
