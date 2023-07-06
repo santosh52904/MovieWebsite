@@ -17,10 +17,9 @@
         <table class="tbl-full">
             <tr>
                 <th>S.NO.</th>
-                <th>Food</th>
-                <th>Price</th>
-                <th>Qty.</th>
-                <th>Total</th>
+                <th>film</th>
+               
+              
                 <th>Order Date</th>
                 <th>Status</th>
                 <th>Customer Name</th>
@@ -39,9 +38,7 @@
                 while ($row = mysqli_fetch_assoc($res)) {
                     //get the all order details
                     $id = $row['id'];
-                    $food = $row['food'];
-                    $price = $row['price'];
-                    $qty = $row['qty'];
+                   
                     $total = $row['total'];
                     $order_date = $row['order_date'];
                     $status = $row['status'];
@@ -55,7 +52,7 @@
                             <?php echo $sn++; ?>
                         </td>
                         <td>
-                            <?php echo $food; ?>
+                            <?php echo $film; ?>
                         </td>
                         <td>
                             <?php echo $price; ?>
