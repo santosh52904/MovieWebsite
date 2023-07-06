@@ -115,9 +115,9 @@ fieldset{
 }
 
 
-/* CSS for Food SEarch Section */
+/* CSS for film SEarch Section */
 
-.food-search{
+.film-search{
     background-image: url(../images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@ fieldset{
     padding: 7% 0;
 }
 
-.food-search input[type="search"]{
+.film-search input[type="search"]{
     width: 50%;
     padding: 1%;
     font-size: 1rem;
@@ -147,12 +147,12 @@ fieldset{
 }
 
 
-/* CSS for Food Menu */
-.food-menu{
+/* CSS for film Menu */
+.film-menu{
     background-color: #ececec;
     padding: 4% 0;
 }
-.food-menu-box{
+.film-menu-box{
     width: 43%;
     margin: 1%;
     padding: 2%;
@@ -161,22 +161,22 @@ fieldset{
     border-radius: 15px;
 }
 
-.food-menu-img{
+.film-menu-img{
     width: 20%;
     float: left;
 }
 
-.food-menu-desc{
+.film-menu-desc{
     width: 70%;
     float: left;
     margin-left: 8%;
 }
 
-.food-price{
+.film-price{
     font-size: 1.2rem;
     margin: 2% 0;
 }
-.food-detail{
+.film-detail{
     font-size: 1rem;
     color: #747d8c;
 }
@@ -224,7 +224,7 @@ fieldset{
         text-align: center;
     }
 
-    .food-search input[type="search"]{
+    .film-search input[type="search"]{
         width: 90%;
         padding: 2%;
         margin-bottom: 3%;
@@ -235,7 +235,7 @@ fieldset{
         padding: 2%;
     }
 
-    .food-search{
+    .film-search{
         padding: 10% 0;
     }
 
@@ -250,11 +250,11 @@ fieldset{
         margin: 4% auto;
     }
 
-    .food-menu{
+    .film-menu{
         padding: 20% 0;
     }
 
-    .food-menu-box{
+    .film-menu-box{
         width: 90%;
         padding: 5%;
         margin-bottom: 5%;
