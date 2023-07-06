@@ -135,10 +135,10 @@ include('partials/menu.php');
                     //image avilable
                     //upload the new image
                     //a.auto rename
-                    //get the extension of img (jpg,png, gif) eg==splecial.food1.jpg
+                    //get the extension of img (jpg,png, gif) eg==splecial.film.jpg
                     $ext = end(explode('.', $image_name));
                     //raname the image
-                    $image_name = "Food_Category_" . rand(000, 999) . '.' . $ext; //eg=Food_Category_864.jpg
+                    $image_name = "film_Category_" . rand(000, 999) . '.' . $ext; //eg=film.jpg
         
                     $source_path = $_FILES['image']['tmp_name'];
                     $destination_path = "../images/category/" . $image_name;
