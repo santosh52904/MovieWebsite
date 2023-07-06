@@ -13,9 +13,8 @@
             if ($count == 1) {
                 //details available
                 $row = mysqli_fetch_assoc($res);
-                $food = $row['food'];
-                $price = $row['price'];
-                $qty = $row['qty'];
+                $film = $row['film'];
+               
                 $status = $row['status'];
                 $customer_name = $row['customer_name'];
                 $customer_contact = $row['customer_contact'];
@@ -39,7 +38,7 @@
                 <tr>
                     <td>Food Name</td>
                     <td><b>
-                            <?php echo $food; ?>
+                            <?php echo $film; ?>
                         </b></td>
                 </tr>
                 <tr>
@@ -118,8 +117,7 @@
             //get the values
             $id = $_POST['id'];
             $price = $_POST['price'];
-            $qty = $_POST['qty'];
-            $total = $_POST['total'];
+          
             $status = $_POST['status'];
             $customer_name = $_POST['customer_name'];
             $custome_contact = $_POST['custome_contact'];
@@ -127,8 +125,7 @@
             $customer_address = $_POST['customer_address'];
             //update values
             $sql2 = "UPDATE tbl_order SET
-             qty = '$qty',
-            total = '$total',
+         
             status = '$status',
             customer_name = '$customer_name',
             custome_contact = '$custome_contact',
