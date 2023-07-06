@@ -1,7 +1,7 @@
 <?php include('partials-front/menu.php'); ?>
 
 <!-- fOOD sEARCH Section Starts Here -->
-<section class="food-search text-center">
+<section class="film-search text-center">
     <div class="container">
         <?php
         // geth the search keyword
@@ -15,20 +15,20 @@
 
     </div>
 </section>
-<!-- fOOD sEARCH Section Ends Here -->
+<!-- film sEARCH Section Ends Here -->
 
 
 
-<!-- fOOD MEnu Section Starts Here -->
-<section class="food-menu">
+<!-- film MEnu Section Starts Here -->
+<section class="film-menu">
     <div class="container">
         <h2 class="text-center">Add On Menu</h2>
         <?php
 
-        //sql query to get the food by seach
+        //sql query to get the film by seach
         //$search =burger' ; DROP database name;
         //"SELECT * FROM tbl_food WHERE title LIKE '%burger'%' OR description LIKE '%burger'%'";
-        $sql = "SELECT * FROM tbl_food WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
+        $sql = "SELECT * FROM tbl_film WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
         $res = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($res);
         if ($count > 0) {
@@ -43,8 +43,8 @@
                 ?>
 
 
-                <div class="food-menu-box">
-                    <div class="food-menu-img">
+                <div class="film-menu-box">
+                    <div class="film-menu-img">
                         <?php
 
                         if ($image_name == "") {
@@ -52,7 +52,7 @@
                             echo "<div class='error'>Image Not Available..</div>";
                         } else {
                             ?>
-                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza"
+                            <img src="<?php echo SITEURL; ?>images/film/<?php echo $image_name; ?>" alt=""
                                 class="img-responsive img-curve">
                             <?php
 
@@ -63,19 +63,19 @@
 
                     </div>
 
-                    <div class="food-menu-desc">
+                    <div class="film-menu-desc">
                         <h4>
                             <?php echo $title; ?>
                         </h4>
-                        <p class="food-price">
+                        <p class="film-price">
                             <?php echo $price; ?>
                         </p>
-                        <p class="food-detail">
+                        <p class="film-detail">
                             <?php echo $description; ?>
                         </p>
                         <br>
 
-                        <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Download
+                        <a href="<?php echo SITEURL; ?>order.php?film_id=<?php echo $id; ?>" class="btn btn-primary">Download
                             Now</a>
                     </div>
                 </div>
@@ -97,5 +97,5 @@
     </div>
 
 </section>
-<!-- fOOD Menu Section Ends Here -->
+<!-- film Menu Section Ends Here -->
 <?php include('partials-front/footer.php'); ?>
